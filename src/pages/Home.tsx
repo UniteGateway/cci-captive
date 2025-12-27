@@ -56,9 +56,9 @@ const Home = () => {
                       Start Presentation <ArrowRight className="h-5 w-5" />
                     </Button>
                   </Link>
-                  <Link to="/presentation?slide=8">
+                  <Link to="/interstate-charges">
                     <Button size="lg" className="gap-2 text-lg px-8 bg-white text-primary hover:bg-white/90 hover:text-primary/80 transition-all hover:scale-105">
-                      View Comparison
+                      View OA Charges
                     </Button>
                   </Link>
                 </div>
