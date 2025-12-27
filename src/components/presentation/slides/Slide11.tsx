@@ -10,19 +10,31 @@ interface StateChargeRow {
   additionalSurcharge: string;
   sldcOthers: string;
   totalOA: string;
+  level: "low" | "medium" | "high";
 }
 
+const getLevelStyles = (level: "low" | "medium" | "high") => {
+  switch (level) {
+    case "low":
+      return "bg-highlight/20 text-highlight font-bold";
+    case "high":
+      return "bg-destructive/20 text-destructive font-bold";
+    default:
+      return "bg-warning/10 text-warning font-bold";
+  }
+};
+
 const stateChargesData: StateChargeRow[] = [
-  { state: "Telangana", ists: "Nil*", stateTransmission: "0.45 – 0.55", wheeling: "0.20 – 0.30", css: "1.50 – 2.20", additionalSurcharge: "0.60 – 1.20", sldcOthers: "0.05 – 0.10", totalOA: "2.8 – 4.3" },
-  { state: "Andhra Pradesh", ists: "Nil*", stateTransmission: "0.40 – 0.55", wheeling: "0.15 – 0.25", css: "1.40 – 2.10", additionalSurcharge: "0.50 – 1.10", sldcOthers: "0.05 – 0.10", totalOA: "2.6 – 4.1" },
-  { state: "Karnataka", ists: "Nil*", stateTransmission: "0.35 – 0.45", wheeling: "0.20 – 0.30", css: "1.20 – 1.90", additionalSurcharge: "0.40 – 0.90", sldcOthers: "0.05 – 0.10", totalOA: "2.2 – 3.6" },
-  { state: "Tamil Nadu", ists: "Nil*", stateTransmission: "0.55 – 0.70", wheeling: "0.25 – 0.35", css: "1.60 – 2.40", additionalSurcharge: "0.80 – 1.50", sldcOthers: "0.05 – 0.10", totalOA: "3.3 – 5.0" },
-  { state: "Maharashtra", ists: "Nil*", stateTransmission: "0.40 – 0.55", wheeling: "0.20 – 0.35", css: "1.80 – 2.80", additionalSurcharge: "1.20 – 1.80", sldcOthers: "0.05 – 0.10", totalOA: "3.7 – 5.6" },
-  { state: "Gujarat", ists: "Nil*", stateTransmission: "0.30 – 0.40", wheeling: "0.15 – 0.25", css: "0.80 – 1.30", additionalSurcharge: "0.00 – 0.40", sldcOthers: "0.05 – 0.10", totalOA: "1.4 – 2.4" },
-  { state: "Rajasthan", ists: "Nil*", stateTransmission: "0.35 – 0.50", wheeling: "0.15 – 0.25", css: "1.00 – 1.60", additionalSurcharge: "0.00 – 0.50", sldcOthers: "0.05 – 0.10", totalOA: "1.6 – 2.9" },
-  { state: "Madhya Pradesh", ists: "Nil*", stateTransmission: "0.30 – 0.45", wheeling: "0.15 – 0.25", css: "1.20 – 1.80", additionalSurcharge: "0.40 – 0.80", sldcOthers: "0.05 – 0.10", totalOA: "2.1 – 3.4" },
-  { state: "Uttar Pradesh", ists: "Nil*", stateTransmission: "0.45 – 0.60", wheeling: "0.25 – 0.35", css: "1.80 – 2.70", additionalSurcharge: "1.00 – 1.80", sldcOthers: "0.05 – 0.10", totalOA: "3.6 – 5.5" },
-  { state: "Haryana", ists: "Nil*", stateTransmission: "0.40 – 0.55", wheeling: "0.20 – 0.30", css: "1.50 – 2.40", additionalSurcharge: "0.80 – 1.40", sldcOthers: "0.05 – 0.10", totalOA: "3.0 – 4.8" },
+  { state: "Telangana", ists: "Nil*", stateTransmission: "0.45 – 0.55", wheeling: "0.20 – 0.30", css: "1.50 – 2.20", additionalSurcharge: "0.60 – 1.20", sldcOthers: "0.05 – 0.10", totalOA: "2.8 – 4.3", level: "medium" },
+  { state: "Andhra Pradesh", ists: "Nil*", stateTransmission: "0.40 – 0.55", wheeling: "0.15 – 0.25", css: "1.40 – 2.10", additionalSurcharge: "0.50 – 1.10", sldcOthers: "0.05 – 0.10", totalOA: "2.6 – 4.1", level: "medium" },
+  { state: "Karnataka", ists: "Nil*", stateTransmission: "0.35 – 0.45", wheeling: "0.20 – 0.30", css: "1.20 – 1.90", additionalSurcharge: "0.40 – 0.90", sldcOthers: "0.05 – 0.10", totalOA: "2.2 – 3.6", level: "medium" },
+  { state: "Tamil Nadu", ists: "Nil*", stateTransmission: "0.55 – 0.70", wheeling: "0.25 – 0.35", css: "1.60 – 2.40", additionalSurcharge: "0.80 – 1.50", sldcOthers: "0.05 – 0.10", totalOA: "3.3 – 5.0", level: "high" },
+  { state: "Maharashtra", ists: "Nil*", stateTransmission: "0.40 – 0.55", wheeling: "0.20 – 0.35", css: "1.80 – 2.80", additionalSurcharge: "1.20 – 1.80", sldcOthers: "0.05 – 0.10", totalOA: "3.7 – 5.6", level: "high" },
+  { state: "Gujarat", ists: "Nil*", stateTransmission: "0.30 – 0.40", wheeling: "0.15 – 0.25", css: "0.80 – 1.30", additionalSurcharge: "0.00 – 0.40", sldcOthers: "0.05 – 0.10", totalOA: "1.4 – 2.4", level: "low" },
+  { state: "Rajasthan", ists: "Nil*", stateTransmission: "0.35 – 0.50", wheeling: "0.15 – 0.25", css: "1.00 – 1.60", additionalSurcharge: "0.00 – 0.50", sldcOthers: "0.05 – 0.10", totalOA: "1.6 – 2.9", level: "low" },
+  { state: "Madhya Pradesh", ists: "Nil*", stateTransmission: "0.30 – 0.45", wheeling: "0.15 – 0.25", css: "1.20 – 1.80", additionalSurcharge: "0.40 – 0.80", sldcOthers: "0.05 – 0.10", totalOA: "2.1 – 3.4", level: "low" },
+  { state: "Uttar Pradesh", ists: "Nil*", stateTransmission: "0.45 – 0.60", wheeling: "0.25 – 0.35", css: "1.80 – 2.70", additionalSurcharge: "1.00 – 1.80", sldcOthers: "0.05 – 0.10", totalOA: "3.6 – 5.5", level: "high" },
+  { state: "Haryana", ists: "Nil*", stateTransmission: "0.40 – 0.55", wheeling: "0.20 – 0.30", css: "1.50 – 2.40", additionalSurcharge: "0.80 – 1.40", sldcOthers: "0.05 – 0.10", totalOA: "3.0 – 4.8", level: "high" },
 ];
 
 const notes = [
@@ -70,7 +82,7 @@ const Slide11 = () => {
                 <td className="py-2 px-2 text-center">{row.css}</td>
                 <td className="py-2 px-2 text-center">{row.additionalSurcharge}</td>
                 <td className="py-2 px-2 text-center">{row.sldcOthers}</td>
-                <td className="py-2 px-3 text-center font-bold text-warning bg-warning/10">{row.totalOA}</td>
+                <td className={`py-2 px-3 text-center ${getLevelStyles(row.level)}`}>{row.totalOA}</td>
               </tr>
             ))}
           </tbody>
