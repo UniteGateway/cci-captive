@@ -13,6 +13,7 @@ import Slide7 from "./slides/Slide7";
 import Slide8 from "./slides/Slide8";
 import Slide9 from "./slides/Slide9";
 import Slide10 from "./slides/Slide10";
+import Slide11 from "./slides/Slide11";
 import uniteLogo from "@/assets/unite-logo.png";
 import cciLogo from "@/assets/cci-logo.png";
 
@@ -27,6 +28,7 @@ const slides = [
   Slide8,
   Slide9,
   Slide10,
+  Slide11,
 ];
 
 const Presentation = () => {
