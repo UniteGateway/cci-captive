@@ -52,12 +52,12 @@ const Home = () => {
                 </p>
                 <div className="flex gap-4 animate-fade-in-delay-3">
                   <Link to="/presentation">
-                    <Button size="lg" variant="secondary" className="gap-2 text-lg px-8">
+                    <Button size="lg" className="gap-2 text-lg px-8 bg-highlight text-white hover:bg-highlight/80 transition-all hover:scale-105">
                       Start Presentation <ArrowRight className="h-5 w-5" />
                     </Button>
                   </Link>
                   <Link to="/presentation?slide=8">
-                    <Button size="lg" variant="outline" className="gap-2 text-lg px-8 border-white text-white hover:bg-white/20">
+                    <Button size="lg" className="gap-2 text-lg px-8 bg-white text-primary hover:bg-white/90 hover:text-primary/80 transition-all hover:scale-105">
                       View Comparison
                     </Button>
                   </Link>
