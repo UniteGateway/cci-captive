@@ -130,6 +130,29 @@
   .slide-exit {
     animation: slideOut 0.3s ease-in forwards;
   }
+
+  .glass-card {
+    @apply bg-white/80 dark:bg-card/80 backdrop-blur-sm border border-white/20 shadow-xl;
+  }
+
+  .gradient-border {
+    @apply relative;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--highlight)) 100%);
+    padding: 2px;
+    border-radius: 1rem;
+  }
+
+  .gradient-border-inner {
+    @apply bg-card rounded-[calc(1rem-2px)] h-full w-full;
+  }
+
+  .card-glow {
+    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.3);
+  }
+
+  .highlight-glow {
+    box-shadow: 0 0 30px -5px hsl(var(--highlight) / 0.4);
+  }
 }
 
 @layer utilities {
