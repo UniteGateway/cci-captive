@@ -64,7 +64,7 @@ const Slide5 = () => {
 
           <div className="bg-secondary/50 rounded-xl p-5 border border-border">
             <h4 className="text-lg font-semibold text-primary mb-2">Telangana HT Fixed Charges</h4>
-            <p className="text-2xl font-bold">~₹375/kVA/month</p>
+            <p className="text-2xl font-bold">~₹500/kVA/month</p>
           </div>
         </div>
 

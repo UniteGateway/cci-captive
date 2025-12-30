@@ -49,17 +49,9 @@ const Slide3 = () => {
               <span className="text-muted-foreground">Cost</span>
               <span className="font-semibold">₹4 Cr/MW</span>
             </div>
-            <div className="flex justify-between py-2 border-b border-border">
-              <span className="text-muted-foreground">Total Project Cost</span>
-              <span className="font-bold text-lg text-primary">₹40 Cr</span>
-            </div>
-            <div className="flex justify-between py-2 border-b border-border">
-              <span className="text-muted-foreground">Interest</span>
-              <span className="font-semibold">6.5% flat (10 years)</span>
-            </div>
             <div className="flex justify-between py-2">
-              <span className="text-muted-foreground">O&M</span>
-              <span className="font-semibold text-highlight">Included for 10 years</span>
+              <span className="text-muted-foreground">Total Project Cost</span>
+              <span className="font-bold text-lg text-primary">₹40 Cr (Including O&M)</span>
             </div>
           </div>
         </div>

@@ -14,7 +14,6 @@ const slideMenuItems: SlideMenuItem[] = [
   { number: 2, title: "Current Power Profile", group: "Overview" },
   { number: 3, title: "Option 1: Captive Solar", group: "Options" },
   { number: 4, title: "Generation & Cost Analysis", group: "Options" },
-  { number: 5, title: "CMD Reduction Benefit", group: "Options" },
   { number: 6, title: "Option 2: Inter-State PPA", group: "Alternatives" },
   { number: 7, title: "Hidden Costs Analysis", group: "Alternatives" },
   { number: 8, title: "Comparison Sheet", group: "Analysis" },
