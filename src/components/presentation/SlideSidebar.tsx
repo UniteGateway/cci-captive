@@ -18,6 +18,7 @@ const slideMenuItems: SlideMenuItem[] = [
   { number: 7, title: "Hidden Costs Analysis", group: "Alternatives" },
   { number: 8, title: "Comparison Sheet", group: "Analysis" },
   { number: 9, title: "10-Year Impact", group: "Analysis" },
+  { number: 12, title: "BOOT Transfer", group: "Analysis" },
   { number: 10, title: "Board Recommendation", group: "Conclusion" },
 ];
 
